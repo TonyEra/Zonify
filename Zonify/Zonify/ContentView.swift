@@ -18,13 +18,20 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                //location 1
-                Image("bg-gradient").resizable().edgesIgnoringSafeArea(.all)
-                //-------------------
+                
                 VStack {
-                    //location 2
-                    Text("Zonify").font(.largeTitle)
-                        .bold().foregroundColor(.white)
+                    //location 1
+                    Text("Zonify")
+                        .padding(.top, 25)
+                        .font(.largeTitle)
+                        .bold()
+                        .foregroundColor(.orange)
+                    
+                    Image(systemName: "cube.fill")
+                        .resizable()
+                        .foregroundColor(.orange)
+                        .frame(width: 75, height: 75)
+                        .opacity(0.75)
                     
                     Spacer()
                     Spacer()
@@ -32,35 +39,60 @@ struct ContentView: View {
                     //----------------
                     //Email Field
                     //----------------
-                    //location 3
-                    HStack {
-                        Image(systemName: "mail").foregroundColor(.white)
-                        TextField("Email", text: $email).foregroundColor(.white).font(.title).fontWeight(.bold)
+                    //location 2
+                    
+                    VStack {
                         
-
-                    }.padding().overlay(
-                        RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 2).foregroundColor(.white)
-                    ).padding()
+                        HStack {
+                            
+                            Text("Email")
+                                .font(.title)
+                                .foregroundColor(.gray)
+                                .padding(.trailing, 16)
+                            
+                            Image(systemName: "mail")
+                                .resizable()
+                                .foregroundColor(.gray)
+                                .frame(width: 30, height: 24)
+                                .padding(.trailing, 235)
+                        } // End HStack
+                        
+                        TextField("Enter your email address...", text: $email)
+                            .textFieldStyle(.roundedBorder)
+                            .font(.headline)
+                            .autocapitalization(.none)
+                    }.padding()
                     
                     //----------------
                     //Password Field
                     //----------------
-                    //location 4
-                    HStack {
-                        Image(systemName: "lock").foregroundColor(.white)
-                        TextField("Password", text: $password)
-                            .foregroundColor(.white)
-                            .font(.title)
-                            .fontWeight(.bold)
+                    //location 3
+                    VStack {
+                        
+                        HStack {
+                            
+                            Text("Password")
+                                .font(.title)
+                                .foregroundColor(.gray)
+                                .padding(.trailing, 16)
+                            
+                            Image(systemName: "lock")
+                                .resizable()
+                                .foregroundColor(.gray)
+                                .frame(width: 22, height: 25)
+                                .padding(.trailing, 188)
+                        } // End HStack
+                        
+                        SecureField("Enter your password...", text: $password)
+                            .textFieldStyle(.roundedBorder)
+                            .font(.headline)
+                            .autocapitalization(.none)
                     }.padding()
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 2)
-                                .foregroundColor(.white)
-                        ).padding()
+                    
                     //----------------
                     //New Account Button
                     //----------------
-                    //location 5
+                    //location 4
                     //----------------
                     //Login Button
                     //----------------
@@ -68,30 +100,57 @@ struct ContentView: View {
                         print("Button tapped!")
                     } label: {
                         Text("Login")
-                            .foregroundColor(.white)
+                            .foregroundColor(.orange)
                             .font(.title)
                             .bold()
                             .frame(maxWidth: .infinity)
                             .padding()
-                            .background(RoundedRectangle(cornerRadius: 25)
+                            .background(RoundedRectangle(cornerRadius: 12)
                                 .fill(.black)
-                                .foregroundColor(.black)
-                                .opacity(0.5)
+                                .opacity(0.05)
+                                .overlay(RoundedRectangle(cornerRadius: 12)
+                                    .stroke(Color.orange, lineWidth: 2)
+                                    .opacity(0.45))
                             ).padding(.horizontal)
                     }
                     .padding()
                     .padding(.top)
+                    
                     //----------------
                     //Spacers
                     //----------------
-                    //location 6
-                    Spacer()
-                    Spacer()
+                    //location 5
                     
-                }//End V Stack
-                
-                //------------------
-                // location 8
+                    Spacer()
+
+                    //----------------
+                    //Sign Up Button
+                    //----------------
+                    //location 6
+                    
+                    VStack {
+
+                        Text("Don't have an account?")
+                            .foregroundColor(.blue)
+                            .opacity(0.78)
+                        
+                        Button {
+                            print("Button tapped!")
+                        } label: {
+                            Text("Sign Up")
+                                .foregroundColor(.black)
+                                .font(.title2)
+                                .bold()
+                                .frame(maxWidth: 110)
+                                .opacity(0.75)
+                                .padding()
+                                .background(RoundedRectangle(cornerRadius:30)
+                                    .stroke(Color.blue, lineWidth: 2)
+                                    .opacity(0.45)
+                                ).padding(.horizontal)
+                        }
+                    } // End VStack          
+                }//End VStack
             }//End ZStack
         }
     }
@@ -105,4 +164,3 @@ struct ContentView: View {
         }
     }
 }
-
