@@ -11,8 +11,10 @@ import CoreData
 struct ContentView: View {
 
     // MARK: - Propertiers
+    @State private var isCreateAccountViewPresented = false
     @State private var email = ""
     @State private var password = ""
+    
       
     // MARK: - View
     var body: some View {
@@ -38,8 +40,10 @@ struct ContentView: View {
                         TextField("Email", text: $email).foregroundColor(.white).font(.title).fontWeight(.bold)
                         
 
-                    }.padding().overlay(
-                        RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 2).foregroundColor(.white)
+                    }.padding()
+                        .background((Color.white).cornerRadius(10).opacity(0.75))
+                        .overlay(
+                        RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 2).foregroundColor(.white).opacity(0.75)
                     ).padding()
                     
                     //----------------
@@ -53,12 +57,24 @@ struct ContentView: View {
                             .font(.title)
                             .fontWeight(.bold)
                     }.padding()
+                        .background((Color.white).cornerRadius(10).opacity(0.75))
                         .overlay(
-                            RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 2)
+                            RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 2).opacity(0.75)
                                 .foregroundColor(.white)
                         ).padding()
                     //----------------
                     //New Account Button
+                    
+                    Button(action:{
+                        isCreateAccountViewPresented.toggle()
+                    }){
+                        Text("Create Account")
+                        
+                    }.foregroundColor(.white)
+                        .font(.title)
+                        .sheet(isPresented: $isCreateAccountViewPresented){
+                           CreateAccountView()
+                        }
                     //----------------
                     //location 5
                     //----------------

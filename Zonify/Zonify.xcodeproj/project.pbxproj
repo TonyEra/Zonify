@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4CA070602A6AF5EC005B1779 /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA0705F2A6AF5EC005B1779 /* CreateAccountView.swift */; };
 		CE5318412A6890F4004ABA79 /* ZonifyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5318402A6890F4004ABA79 /* ZonifyApp.swift */; };
 		CE5318432A6890F4004ABA79 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5318422A6890F4004ABA79 /* Persistence.swift */; };
 		CE5318462A6890F4004ABA79 /* Zonify.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE5318442A6890F4004ABA79 /* Zonify.xcdatamodeld */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4CA0705F2A6AF5EC005B1779 /* CreateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountView.swift; sourceTree = "<group>"; };
 		CE53183D2A6890F4004ABA79 /* Zonify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zonify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE5318402A6890F4004ABA79 /* ZonifyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZonifyApp.swift; sourceTree = "<group>"; };
 		CE5318422A6890F4004ABA79 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				CE5318402A6890F4004ABA79 /* ZonifyApp.swift */,
 				CE5318422A6890F4004ABA79 /* Persistence.swift */,
 				CE5318472A6890F4004ABA79 /* ContentView.swift */,
+				4CA0705F2A6AF5EC005B1779 /* CreateAccountView.swift */,
 				CE5318492A6890F6004ABA79 /* Assets.xcassets */,
 				CE53184B2A6890F6004ABA79 /* Zonify.entitlements */,
 				CE5318442A6890F4004ABA79 /* Zonify.xcdatamodeld */,
@@ -149,6 +152,7 @@
 				CE5318412A6890F4004ABA79 /* ZonifyApp.swift in Sources */,
 				CE5318482A6890F4004ABA79 /* ContentView.swift in Sources */,
 				CE5318432A6890F4004ABA79 /* Persistence.swift in Sources */,
+				4CA070602A6AF5EC005B1779 /* CreateAccountView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
