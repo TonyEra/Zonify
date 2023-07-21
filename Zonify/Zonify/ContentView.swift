@@ -7,12 +7,16 @@
 
 import SwiftUI
 import CoreData
+import FirebaseAuth
 
 struct ContentView: View {
 
     // MARK: - Propertiers
     @State private var email = ""
     @State private var password = ""
+    @State private var isPasswordCorrect: Bool = false
+    @State private var showErrorAlert: Bool = false
+    @State private var isCreateAccountViewPresented: Bool = false
       
     // MARK: - View
     var body: some View {
@@ -96,9 +100,21 @@ struct ContentView: View {
                     //----------------
                     //Login Button
                     //----------------
-                    Button {
-                        print("Button tapped!")
-                    } label: {
+                    Button (action: {
+                        Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+                            
+                            if let error = error {
+                                print(error)
+                                email = ""
+                                password = ""
+                                showErrorAlert.toggle()
+                            }
+                            
+                            if let authResult = authResult {
+                                isPasswordCorrect = true
+                            }
+                        }
+                    }) {
                         Text("Login")
                             .foregroundColor(.orange)
                             .font(.title)
@@ -112,6 +128,9 @@ struct ContentView: View {
                                     .stroke(Color.orange, lineWidth: 2)
                                     .opacity(0.45))
                             ).padding(.horizontal)
+                        .alert(isPresented: $showErrorAlert, content:{
+                                Alert(title: Text("Error login please check your email/password"))
+                        })
                     }
                     .padding()
                     .padding(.top)
@@ -134,9 +153,10 @@ struct ContentView: View {
                             .foregroundColor(.blue)
                             .opacity(0.78)
                         
-                        Button {
-                            print("Button tapped!")
-                        } label: {
+                        Button (action:{
+                            isCreateAccountViewPresented.toggle()
+                            print(isCreateAccountViewPresented)
+                        }) {
                             Text("Sign Up")
                                 .foregroundColor(.black)
                                 .font(.title2)
@@ -148,6 +168,9 @@ struct ContentView: View {
                                     .stroke(Color.blue, lineWidth: 2)
                                     .opacity(0.45)
                                 ).padding(.horizontal)
+                                .sheet(isPresented: $isCreateAccountViewPresented) {
+                                    CreateAccountView()
+                                }
                         }
                     } // End VStack          
                 }//End VStack
