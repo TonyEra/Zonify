@@ -4,6 +4,7 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct CreateAccountView: View {
     
@@ -13,100 +14,104 @@ struct CreateAccountView: View {
     @State private var password = ""
 
     var body: some View {
-        ZStack{
-           // Image("bg-gradient-2").resizable().edgesIgnoringSafeArea(.all)
-            
+
+        VStack{
+            Spacer()
+            //-------------------------
+            // Page Title
+            //-------------------------
             VStack{
                 Spacer()
-                //-------------------------
-                // Page Title
-                //-------------------------
-                VStack{
-                    Spacer()
-                    Text("Create a New Account").font(.largeTitle)
-                        .bold().foregroundColor(.white)
-                        .opacity(0.8)
-                    Spacer()
-
-                }// VStack page title
+                Text("New Account").font(.largeTitle)
+                    .bold().foregroundColor(.pink)
+                    .opacity(0.8)
                 Spacer()
+
+            }// VStack page title
+            Spacer()
+            //-------------------------
+            // Email
+            //-------------------------
+            VStack{
+                HStack{
+                    Image(systemName: "mail").foregroundColor(.gray)
+                    TextField("Email", text: $email)
+                        .foregroundColor(.gray)
+                        .font(.title)
+                        .fontWeight(.bold)
+                }.padding()
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 4)
+                            .foregroundColor(.pink).opacity(0.8)).padding()
                 //-------------------------
-                // Email
+                // Password
                 //-------------------------
-                VStack{
-                    HStack{
-                        Image(systemName: "mail").foregroundColor(.gray)
-                        TextField("Email", text: $email)
-                            .foregroundColor(Color.white)
-                            .font(.title)
-                            .fontWeight(.bold)
-                    }.padding()
-                        .background((Color.white).cornerRadius(10).opacity(0.75))
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 2)
-                                .foregroundColor(.white).opacity(0.75)).padding()
-                    //-------------------------
-                    // Password
-                    //-------------------------
-                    HStack{
-                        Image(systemName: "lock")
-                            .foregroundColor(.gray)
-                        TextField("Password", text: $password)
-                            .foregroundColor(.white)
-                            .font(.title)
-                            .fontWeight(.bold)
-                    }.padding()
-                        .background((Color.white).cornerRadius(10).opacity(0.75))
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 2)
-                                .foregroundColor(.white).opacity(0.75)
-                        ).padding()
-                }// Vstack email , password
+                HStack{
+                    Image(systemName: "lock")
+                        .foregroundColor(.gray)
+                    TextField("Password", text: $password)
+                        .foregroundColor(.gray)
+                        .font(.title)
+                        .fontWeight(.bold)
+                }.padding()
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 4)
+                            .foregroundColor(.pink).opacity(0.8)
+                    ).padding()
+            }// Vstack email , password
+            
+            //-------------------------
+            // Create account button
+            //-------------------------
+            VStack{
+                Button (action: {
+                    print("Clickkk")
+                    Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+                        if let error = error {
+                            print(error)
+                            return
+                        }
+                        
+                        if let authResult = authResult {
+                            print("\(authResult.user.uid)")
+                        }
+                    }
+                    print("Create account: \(email) \t \(password)")
+                    presentationMode.wrappedValue.dismiss()
+                }) {
+                    Text("Create Account")
+                        .foregroundColor(.white)
+                        .font(.title)
+                        .bold()
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .background(RoundedRectangle(cornerRadius: 25)
+                            .fill(.pink)
+                            .foregroundColor(.pink)
+                            .opacity(0.8)
+                        ).padding(.horizontal)
+                }
+                .padding()
+                .padding(.top)
                 
                 //-------------------------
-                // Create account button
+                // Return Button
                 //-------------------------
+                
                 VStack{
-                    Button {
-                        print("Create account: \(email) \t \(password)")
-                    } label: {
-                        Text("Create Account")
-                            .foregroundColor(.white)
+                    Button( action: {
+                        presentationMode.wrappedValue.dismiss()
+                    }) {
+                        
+                        Text("Return")
+                            .foregroundColor(.gray)
                             .font(.title)
-                            .bold()
-                            .frame(maxWidth: .infinity)
-                            .padding()
-                            .background(RoundedRectangle(cornerRadius: 25)
-                                .fill(Color.init(hue: 0.9, saturation: 0.9, brightness: 0.8))
-                                .foregroundColor(.white)
-                                .opacity(1)
-                            ).padding(.horizontal)
+                        
                     }
-                    .padding()
-                    .padding(.top)
-                    
-                    //-------------------------
-                    // Return Button
-                    //-------------------------
-                    
-                    VStack{
-                        Button( action: {
-                            presentationMode.wrappedValue.dismiss()
-                        }) {
-                            
-                            Text("Return")
-                                .foregroundColor(.white)
-                                .font(.title)
-                            
-                        }
-                        Spacer()
-                    }//end of button vstack
-                }
-            }.background(LinearGradient(gradient: Gradient(colors:[
-                Color.init(hue: 0.72, saturation: 0.8, brightness: 0.3),
-                Color.init(hue: 0.72, saturation: 0.9, brightness: 0.1)]), startPoint: .top, endPoint: .bottom))
-            
-        }
+                    Spacer()
+                }//end of button vstack
+            }
+        }.background(Color.white).edgesIgnoringSafeArea(.all)//end VStack main
         
     }//end body
 }

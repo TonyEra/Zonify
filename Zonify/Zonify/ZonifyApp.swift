@@ -6,13 +6,17 @@
 //
 
 import SwiftUI
+import FirebaseCore
 
 @main
 struct ZonifyApp: App {
  
+    init() {
+        FirebaseApp.configure()
+    }
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LoginView()
         }
     }
 }
