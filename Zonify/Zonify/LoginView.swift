@@ -124,7 +124,7 @@ struct LoginView: View {
                             .frame(maxWidth: .infinity)
                             .padding()
                             .background(RoundedRectangle(cornerRadius: 12)
-                                .fill(.black)
+                                .fill(.orange)
                                 .opacity(0.05)
                                 .overlay(RoundedRectangle(cornerRadius: 12)
                                     .stroke(Color.orange, lineWidth: 2)
@@ -152,7 +152,7 @@ struct LoginView: View {
                     VStack {
 
                         Text("Don't have an account?")
-                            .foregroundColor(.blue)
+                            .foregroundColor(.gray)
                             .opacity(0.78)
                         
                         Button (action:{
@@ -160,7 +160,7 @@ struct LoginView: View {
                             print(isCreateAccountViewPresented)
                         }) {
                             Text("Sign Up")
-                                .foregroundColor(.black)
+                                .foregroundColor(.blue)
                                 .font(.title2)
                                 .bold()
                                 .frame(maxWidth: 110)

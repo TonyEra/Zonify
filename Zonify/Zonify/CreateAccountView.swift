@@ -23,7 +23,7 @@ struct CreateAccountView: View {
             VStack{
                 Spacer()
                 Text("New Account").font(.largeTitle)
-                    .bold().foregroundColor(.pink)
+                    .bold().foregroundColor(.orange)
                     .opacity(0.8)
                 Spacer()
 
@@ -41,8 +41,8 @@ struct CreateAccountView: View {
                         .fontWeight(.bold)
                 }.padding()
                     .overlay(
-                        RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 4)
-                            .foregroundColor(.pink).opacity(0.8)).padding()
+                        RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 2)
+                            .foregroundColor(.orange).opacity(0.8)).padding()
                 //-------------------------
                 // Password
                 //-------------------------
@@ -55,8 +55,8 @@ struct CreateAccountView: View {
                         .fontWeight(.bold)
                 }.padding()
                     .overlay(
-                        RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 4)
-                            .foregroundColor(.pink).opacity(0.8)
+                        RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 2)
+                            .foregroundColor(.orange).opacity(0.8)
                     ).padding()
             }// Vstack email , password
             
@@ -86,8 +86,8 @@ struct CreateAccountView: View {
                         .frame(maxWidth: .infinity)
                         .padding()
                         .background(RoundedRectangle(cornerRadius: 25)
-                            .fill(.pink)
-                            .foregroundColor(.pink)
+                            .fill(.orange)
+                            .foregroundColor(.orange)
                             .opacity(0.8)
                         ).padding(.horizontal)
                 }
