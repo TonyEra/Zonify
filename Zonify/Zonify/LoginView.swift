@@ -14,11 +14,10 @@ struct LoginView: View {
     // MARK: - Propertiers
     @State private var email = ""
     @State private var password = ""
+    @State private var isPasswordCorrect: Bool = false
     @State private var showErrorAlert: Bool = false
     @State private var isCreateAccountViewPresented: Bool = false
       
-    @Binding var isLoggedIn: Bool // here is the Binding
-    
     // MARK: - View
     var body: some View {
         NavigationStack {
@@ -111,10 +110,9 @@ struct LoginView: View {
                                 showErrorAlert.toggle()
                             }
                             
-                            if authResult != nil {
-                                isLoggedIn = true
+                            if let authResult = authResult {
+                                isPasswordCorrect = true
                                 print("Login success")
-                                //HomeView(email: email)
                             }
                             print("Attempted login")
                         }
@@ -179,22 +177,19 @@ struct LoginView: View {
                         
                     } // End VStack          
                 }//End VStack
-                /*NavigationLink(destination: HomeView(email:email), isActive: $isLoggedIn) {
+                NavigationLink(destination: HomeView(email:email), isActive: $isPasswordCorrect) {
                     EmptyView()
-                }*/
+                }
             }//End ZStack
         }
     }
-
+    
     /**
             Preview Method
      */
     struct ContentView_Previews: PreviewProvider {
-        
-        @State static var value = false
-        
         static var previews: some View {
-            LoginView(isLoggedIn: $value)
+            LoginView()
         }
     }
 }
