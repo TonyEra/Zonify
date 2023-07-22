@@ -10,12 +10,13 @@
 		CE5318412A6890F4004ABA79 /* ZonifyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5318402A6890F4004ABA79 /* ZonifyApp.swift */; };
 		CE5318432A6890F4004ABA79 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5318422A6890F4004ABA79 /* Persistence.swift */; };
 		CE5318462A6890F4004ABA79 /* Zonify.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE5318442A6890F4004ABA79 /* Zonify.xcdatamodeld */; };
-		CE5318482A6890F4004ABA79 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5318472A6890F4004ABA79 /* ContentView.swift */; };
+		CE5318482A6890F4004ABA79 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5318472A6890F4004ABA79 /* LoginView.swift */; };
 		CE53184A2A6890F6004ABA79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE5318492A6890F6004ABA79 /* Assets.xcassets */; };
 		CE53184E2A6890F6004ABA79 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE53184D2A6890F6004ABA79 /* Preview Assets.xcassets */; };
 		CE53185C2A6B3BA9004ABA79 /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE53185B2A6B3BA9004ABA79 /* CreateAccountView.swift */; };
 		CE53185E2A6B3C4F004ABA79 /* GoogleService-Info-2.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE53185D2A6B3C4F004ABA79 /* GoogleService-Info-2.plist */; };
 		CE5318612A6B3CA3004ABA79 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CE5318602A6B3CA3004ABA79 /* FirebaseAuth */; };
+		CE5318652A6B443B004ABA79 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5318642A6B443B004ABA79 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,12 +24,13 @@
 		CE5318402A6890F4004ABA79 /* ZonifyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZonifyApp.swift; sourceTree = "<group>"; };
 		CE5318422A6890F4004ABA79 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		CE5318452A6890F4004ABA79 /* Zonify.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Zonify.xcdatamodel; sourceTree = "<group>"; };
-		CE5318472A6890F4004ABA79 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CE5318472A6890F4004ABA79 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		CE5318492A6890F6004ABA79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE53184B2A6890F6004ABA79 /* Zonify.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Zonify.entitlements; sourceTree = "<group>"; };
 		CE53184D2A6890F6004ABA79 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CE53185B2A6B3BA9004ABA79 /* CreateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountView.swift; sourceTree = "<group>"; };
 		CE53185D2A6B3C4F004ABA79 /* GoogleService-Info-2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-2.plist"; sourceTree = "<group>"; };
+		CE5318642A6B443B004ABA79 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,8 +67,9 @@
 				CE53185D2A6B3C4F004ABA79 /* GoogleService-Info-2.plist */,
 				CE5318402A6890F4004ABA79 /* ZonifyApp.swift */,
 				CE5318422A6890F4004ABA79 /* Persistence.swift */,
-				CE5318472A6890F4004ABA79 /* ContentView.swift */,
+				CE5318472A6890F4004ABA79 /* LoginView.swift */,
 				CE53185B2A6B3BA9004ABA79 /* CreateAccountView.swift */,
+				CE5318642A6B443B004ABA79 /* HomeView.swift */,
 				CE5318492A6890F6004ABA79 /* Assets.xcassets */,
 				CE53184B2A6890F6004ABA79 /* Zonify.entitlements */,
 				CE5318442A6890F4004ABA79 /* Zonify.xcdatamodeld */,
@@ -162,7 +165,8 @@
 			files = (
 				CE5318462A6890F4004ABA79 /* Zonify.xcdatamodeld in Sources */,
 				CE5318412A6890F4004ABA79 /* ZonifyApp.swift in Sources */,
-				CE5318482A6890F4004ABA79 /* ContentView.swift in Sources */,
+				CE5318482A6890F4004ABA79 /* LoginView.swift in Sources */,
+				CE5318652A6B443B004ABA79 /* HomeView.swift in Sources */,
 				CE5318432A6890F4004ABA79 /* Persistence.swift in Sources */,
 				CE53185C2A6B3BA9004ABA79 /* CreateAccountView.swift in Sources */,
 			);

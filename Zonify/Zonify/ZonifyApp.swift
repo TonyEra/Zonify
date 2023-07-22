@@ -16,7 +16,7 @@ struct ZonifyApp: App {
     }
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LoginView()
         }
     }
 }

@@ -9,7 +9,7 @@ import SwiftUI
 import CoreData
 import FirebaseAuth
 
-struct ContentView: View {
+struct LoginView: View {
 
     // MARK: - Propertiers
     @State private var email = ""
@@ -183,7 +183,7 @@ struct ContentView: View {
      */
     struct ContentView_Previews: PreviewProvider {
         static var previews: some View {
-            ContentView()
+            LoginView()
         }
     }
 }
