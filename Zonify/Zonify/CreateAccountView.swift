@@ -36,7 +36,7 @@ struct CreateAccountView: View {
                 HStack{
                     Image(systemName: "mail").foregroundColor(.gray)
                     TextField("Email", text: $email)
-                        .foregroundColor(.white)
+                        .foregroundColor(.gray)
                         .font(.title)
                         .fontWeight(.bold)
                 }.padding()
@@ -50,7 +50,7 @@ struct CreateAccountView: View {
                     Image(systemName: "lock")
                         .foregroundColor(.gray)
                     TextField("Password", text: $password)
-                        .foregroundColor(.white)
+                        .foregroundColor(.gray)
                         .font(.title)
                         .fontWeight(.bold)
                 }.padding()
@@ -65,6 +65,7 @@ struct CreateAccountView: View {
             //-------------------------
             VStack{
                 Button (action: {
+                    print("Clickkk")
                     Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
                         if let error = error {
                             print(error)

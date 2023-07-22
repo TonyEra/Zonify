@@ -112,7 +112,9 @@ struct LoginView: View {
                             
                             if let authResult = authResult {
                                 isPasswordCorrect = true
+                                print("Login success")
                             }
+                            print("Attempted login")
                         }
                     }) {
                         Text("Login")
@@ -172,8 +174,12 @@ struct LoginView: View {
                                     CreateAccountView()
                                 }
                         }
+                        
                     } // End VStack          
                 }//End VStack
+                NavigationLink(destination: HomeView(email:email), isActive: $isPasswordCorrect) {
+                    EmptyView()
+                }
             }//End ZStack
         }
     }
