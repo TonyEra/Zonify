@@ -9,11 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     
-    var userEmail: String = ""
-    
-    init(email: String) {
-        userEmail = email
-    }
+    @Binding var email: String
     
     var body: some View {
         
@@ -30,7 +26,9 @@ struct HomeView: View {
 }
 
 struct HomeView_Previews: PreviewProvider {
+    
+    @State static var value = ""
     static var previews: some View {
-        HomeView(email:"")
+        HomeView(email:$value)
     }
 }

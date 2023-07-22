@@ -10,13 +10,13 @@ import FirebaseCore
 
 @main
 struct ZonifyApp: App {
- 
+    @State private var value = false
     init() {
         FirebaseApp.configure()
     }
     var body: some Scene {
         WindowGroup {
-            LoginView()
+            AppView(isLoggedIn: value, email: "")
         }
     }
 }
