@@ -177,7 +177,7 @@ struct LoginView: View {
                         
                     } // End VStack          
                 }//End VStack
-                NavigationLink(destination: HomeView(email:email), isActive: $isPasswordCorrect) {
+                NavigationLink(destination: NoteBookView(), isActive: $isPasswordCorrect) {
                     EmptyView()
                 }
             }//End ZStack

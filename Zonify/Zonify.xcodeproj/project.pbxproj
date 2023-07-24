@@ -14,9 +14,15 @@
 		CE53184A2A6890F6004ABA79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE5318492A6890F6004ABA79 /* Assets.xcassets */; };
 		CE53184E2A6890F6004ABA79 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE53184D2A6890F6004ABA79 /* Preview Assets.xcassets */; };
 		CE53185C2A6B3BA9004ABA79 /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE53185B2A6B3BA9004ABA79 /* CreateAccountView.swift */; };
-		CE53185E2A6B3C4F004ABA79 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE53185D2A6B3C4F004ABA79 /* GoogleService-Info.plist */; };
 		CE5318612A6B3CA3004ABA79 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CE5318602A6B3CA3004ABA79 /* FirebaseAuth */; };
-		CE5318652A6B443B004ABA79 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5318642A6B443B004ABA79 /* HomeView.swift */; };
+		CE5318652A6B443B004ABA79 /* NoteBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5318642A6B443B004ABA79 /* NoteBookView.swift */; };
+		CE7D23B92A6DA60000259B90 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE7D23B82A6DA60000259B90 /* GoogleService-Info.plist */; };
+		CE7D23BE2A6DA7C100259B90 /* NoteList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7D23BD2A6DA7C100259B90 /* NoteList.swift */; };
+		CE7D23C02A6DA82700259B90 /* NoteBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7D23BF2A6DA82700259B90 /* NoteBook.swift */; };
+		CE7D23C32A6DC38B00259B90 /* NoteStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7D23C22A6DC38B00259B90 /* NoteStub.swift */; };
+		CE7D23C52A6DC7DA00259B90 /* NoteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7D23C42A6DC7DA00259B90 /* NoteListView.swift */; };
+		CE7D23CA2A6DF6D600259B90 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = CE7D23C92A6DF6D600259B90 /* Introspect */; };
+		CE7D23CC2A6DFB0B00259B90 /* View+AlertTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7D23CB2A6DFB0B00259B90 /* View+AlertTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,8 +35,14 @@
 		CE53184B2A6890F6004ABA79 /* Zonify.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Zonify.entitlements; sourceTree = "<group>"; };
 		CE53184D2A6890F6004ABA79 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CE53185B2A6B3BA9004ABA79 /* CreateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountView.swift; sourceTree = "<group>"; };
-		CE53185D2A6B3C4F004ABA79 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		CE5318642A6B443B004ABA79 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		CE5318642A6B443B004ABA79 /* NoteBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteBookView.swift; sourceTree = "<group>"; };
+		CE7D23B82A6DA60000259B90 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CE7D23BD2A6DA7C100259B90 /* NoteList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteList.swift; sourceTree = "<group>"; };
+		CE7D23BF2A6DA82700259B90 /* NoteBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteBook.swift; sourceTree = "<group>"; };
+		CE7D23C12A6DC2D600259B90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CE7D23C22A6DC38B00259B90 /* NoteStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteStub.swift; sourceTree = "<group>"; };
+		CE7D23C42A6DC7DA00259B90 /* NoteListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListView.swift; sourceTree = "<group>"; };
+		CE7D23CB2A6DFB0B00259B90 /* View+AlertTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+AlertTextField.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +51,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE5318612A6B3CA3004ABA79 /* FirebaseAuth in Frameworks */,
+				CE7D23CA2A6DF6D600259B90 /* Introspect in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,12 +77,15 @@
 		CE53183F2A6890F4004ABA79 /* Zonify */ = {
 			isa = PBXGroup;
 			children = (
-				CE53185D2A6B3C4F004ABA79 /* GoogleService-Info.plist */,
+				CE7D23C12A6DC2D600259B90 /* Info.plist */,
+				CE7D23BA2A6DA6EB00259B90 /* Models */,
+				CE7D23B82A6DA60000259B90 /* GoogleService-Info.plist */,
 				CE5318402A6890F4004ABA79 /* ZonifyApp.swift */,
 				CE5318422A6890F4004ABA79 /* Persistence.swift */,
 				CE5318472A6890F4004ABA79 /* LoginView.swift */,
+				CE7D23C42A6DC7DA00259B90 /* NoteListView.swift */,
 				CE53185B2A6B3BA9004ABA79 /* CreateAccountView.swift */,
-				CE5318642A6B443B004ABA79 /* HomeView.swift */,
+				CE5318642A6B443B004ABA79 /* NoteBookView.swift */,
 				CE5318492A6890F6004ABA79 /* Assets.xcassets */,
 				CE53184B2A6890F6004ABA79 /* Zonify.entitlements */,
 				CE5318442A6890F4004ABA79 /* Zonify.xcdatamodeld */,
@@ -84,6 +100,17 @@
 				CE53184D2A6890F6004ABA79 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CE7D23BA2A6DA6EB00259B90 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CE7D23BD2A6DA7C100259B90 /* NoteList.swift */,
+				CE7D23BF2A6DA82700259B90 /* NoteBook.swift */,
+				CE7D23C22A6DC38B00259B90 /* NoteStub.swift */,
+				CE7D23CB2A6DFB0B00259B90 /* View+AlertTextField.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -104,6 +131,7 @@
 			name = Zonify;
 			packageProductDependencies = (
 				CE5318602A6B3CA3004ABA79 /* FirebaseAuth */,
+				CE7D23C92A6DF6D600259B90 /* Introspect */,
 			);
 			productName = Zonify;
 			productReference = CE53183D2A6890F4004ABA79 /* Zonify.app */;
@@ -135,6 +163,7 @@
 			mainGroup = CE5318342A6890F4004ABA79;
 			packageReferences = (
 				CE53185F2A6B3CA3004ABA79 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				CE7D23C82A6DF6D600259B90 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
 			);
 			productRefGroup = CE53183E2A6890F4004ABA79 /* Products */;
 			projectDirPath = "";
@@ -152,7 +181,7 @@
 			files = (
 				CE53184E2A6890F6004ABA79 /* Preview Assets.xcassets in Resources */,
 				CE53184A2A6890F6004ABA79 /* Assets.xcassets in Resources */,
-				CE53185E2A6B3C4F004ABA79 /* GoogleService-Info.plist in Resources */,
+				CE7D23B92A6DA60000259B90 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,12 +192,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE7D23C52A6DC7DA00259B90 /* NoteListView.swift in Sources */,
+				CE7D23CC2A6DFB0B00259B90 /* View+AlertTextField.swift in Sources */,
 				CE5318462A6890F4004ABA79 /* Zonify.xcdatamodeld in Sources */,
 				CE5318412A6890F4004ABA79 /* ZonifyApp.swift in Sources */,
 				CE5318482A6890F4004ABA79 /* LoginView.swift in Sources */,
-				CE5318652A6B443B004ABA79 /* HomeView.swift in Sources */,
+				CE7D23C32A6DC38B00259B90 /* NoteStub.swift in Sources */,
+				CE5318652A6B443B004ABA79 /* NoteBookView.swift in Sources */,
 				CE5318432A6890F4004ABA79 /* Persistence.swift in Sources */,
+				CE7D23BE2A6DA7C100259B90 /* NoteList.swift in Sources */,
 				CE53185C2A6B3BA9004ABA79 /* CreateAccountView.swift in Sources */,
+				CE7D23C02A6DA82700259B90 /* NoteBook.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,6 +329,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Zonify/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Zonify/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -313,10 +348,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = zonify.com.Zonify;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -331,6 +368,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Zonify/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Zonify/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -349,10 +387,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = zonify.com.Zonify;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
@@ -388,6 +428,14 @@
 				minimumVersion = 10.0.0;
 			};
 		};
+		CE7D23C82A6DF6D600259B90 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.10.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -395,6 +443,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CE53185F2A6B3CA3004ABA79 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
+		};
+		CE7D23C92A6DF6D600259B90 /* Introspect */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE7D23C82A6DF6D600259B90 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
+			productName = Introspect;
 		};
 /* End XCSwiftPackageProductDependency section */
 

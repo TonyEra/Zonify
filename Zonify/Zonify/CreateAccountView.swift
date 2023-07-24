@@ -49,7 +49,7 @@ struct CreateAccountView: View {
                 HStack{
                     Image(systemName: "lock")
                         .foregroundColor(.gray)
-                    TextField("Password", text: $password)
+                    SecureField("Password", text: $password)
                         .foregroundColor(.gray)
                         .font(.title)
                         .fontWeight(.bold)
