@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-let boardListBackgroundColor = Color(uiColor: UIColor(red: 0.92, green: 0.94, blue: 0.94, alpha: 1))
-let bgColor = Color(uiColor: UIColor(red: 0.1, green: 0.25, blue: 0.2, alpha: 1))
+let boardListBackgroundColor = Color(.orange).opacity(0.7)
+let bgColor = Color(.white)
 
 struct NoteBookView: View {
     @StateObject private var board: NoteBook = NoteBook.stub
@@ -24,7 +24,11 @@ struct NoteBookView: View {
                                 self.dragging = boardList
                                 return NSItemProvider(object: boardList)
                             })
-                    }
+                    }.frame(
+                        maxWidth: .infinity,
+                        maxHeight: .infinity
+
+                    )
                     
                     Button("+ Add Note") {
                         handleAddNote()

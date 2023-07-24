@@ -22,13 +22,13 @@ struct NoteListView: View {
         VStack(alignment: .leading, spacing: 16) {
             headerView
                 .listStyle(.plain)
-                .frame(maxHeight: noteHeight)
+                .frame(maxHeight: .infinity)
             .padding(.horizontal)
             .frame(maxWidth: .infinity, alignment: .center)
         }
         .padding(.vertical)
         .background(noteListBackgroundColor)
-        .frame(width: UIScreen.main.bounds.width - 30)
+        //.frame(width: UIScreen.main.bounds.width - 30)
         .cornerRadius(8)
         .foregroundColor(.black)
     }
